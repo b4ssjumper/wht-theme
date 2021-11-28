@@ -151,9 +151,13 @@
             &.gk__block {
                 margin-bottom: 0.5rem;
 
+                /* Icon rechte Sitebar */
                 > .ghostkit-icon-box-icon {
                     background-color: #000;
 
+                    .ghostkit-svg-icon {
+                        color: #fff !important;
+                    }
                     .svg-inline--fa {
                         color: #fff !important;
                     }

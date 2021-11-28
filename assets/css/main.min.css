@@ -8289,10 +8289,15 @@ body button:focus {
 
 #content .frontpage__sidebar .ghostkit-col-content > .ghostkit-icon-box.gk__block {
   margin-bottom: 0.5rem;
+  /* Icon rechte Sitebar */
 }
 
 #content .frontpage__sidebar .ghostkit-col-content > .ghostkit-icon-box.gk__block > .ghostkit-icon-box-icon {
   background-color: #000;
+}
+
+#content .frontpage__sidebar .ghostkit-col-content > .ghostkit-icon-box.gk__block > .ghostkit-icon-box-icon .ghostkit-svg-icon {
+  color: #fff !important;
 }
 
 #content .frontpage__sidebar .ghostkit-col-content > .ghostkit-icon-box.gk__block > .ghostkit-icon-box-icon .svg-inline--fa {
