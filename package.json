@@ -1,0 +1,24 @@
+{
+  "name": "wht-theme",
+  "version": "1.0.0",
+  "author": "Martin Rehberger <martin@matchwerk.de>",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "prebuild:css": "node-sass assets/scss/main.scss -o assets/css/",
+    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < assets/css/main.css | postcss --use cssnano --no-map > assets/css/main.min.css && rm assets/css/main.css",
+    "build:js": "cp node_modules/font-awesome/webfonts/* assets/css/fonts/ && cp node_modules/open-sans/fonts/* assets/css/fonts/ && cp node_modules/slick-carousel/slick/slick.min.js assets/vendor/",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "dependencies": {
+    "font-awesome": "fortawesome/font-awesome",
+    "open-sans": "webfontkit/open-sans",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.12.0",
+    "postcss": "^7.0.14",
+    "postcss-cli": "^6.1.2"
+  }
+}

@@ -1,0 +1,72 @@
+.ghostkit-icon-box {
+    border: 0;
+}
+
+.ghostkit-grid-gap-md > .ghostkit-col {
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+}
+
+.ghostkit-col {
+    box-sizing: border-box;
+}
+
+.ghostkit-icon-box:hover svg {
+    color: $icon-hover-gray;
+}
+
+#content .grid__icon {
+    .ghostkit-col {
+        align-self: baseline;
+    }
+
+    .ghostkit-col-content {
+        margin: 0;
+                
+        @include media-breakpoint-up(sm) {
+            margin: auto;
+        }
+
+        figure {
+            width: 90%;
+
+            img {
+                height: 80px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            figcaption {
+                margin-top: 0.5rem;
+
+                > a {
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+#content .col__contact {
+    .ghostkit-icon-box {
+        padding: 0;
+        margin-bottom: 0.75rem;
+
+        .ghostkit-icon-box-icon {
+            color: $light-gray;
+
+            > .svg-inline--fa {
+                width: 1rem;
+            }
+        }
+
+        .ghostkit-icon-box-content p {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import "vars/global-variables.scss";
+@import "../../node_modules/open-sans/open-sans.scss";
+@import "../../node_modules/font-awesome/scss/fontawesome.scss";
+@import "../../node_modules/font-awesome/scss/brands.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+
+// global styles
+@import "parts/mixins";
+@import "parts/grid";
+@import "parts/global";
+
+// parts that appear on multiple pages
+@import "parts/content";
+@import "parts/header";
+@import "parts/footer";
+@import "parts/breadcrumbs";
+@import "parts/icons";
+@import "parts/sidebar";
+@import "parts/form";
+
+// single page stuff
+@import "content/main";
+@import "content/front";
+@import "content/post";
+@import "content/blog";
+
+// gutenberg shizzle
+@import "gutenberg/boxes";
+@import "gutenberg/button";

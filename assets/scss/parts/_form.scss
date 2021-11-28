@@ -1,0 +1,61 @@
+#content,
+body
+{
+    form.wpcf7-form {
+        margin-bottom: 1rem;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+
+        label {
+            font-weight: 600;
+
+            .wpcf7-form-control-wrap {
+                display: block;
+
+                input, textarea, select
+                {
+                    width: 100%;
+                    background-color: #fff;
+                    border: 1px solid $light-gray;
+                    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.1);
+                    padding: 0.25rem;
+                    font-family: 'open sans', sans-serif;
+                    font-weight: 300;
+                    color: $main-font-color;
+                    opacity: 0.8;
+                    transition: all 0.2s ease;
+                    margin: 0;
+
+                    &:focus {
+                        border-color: $main-font-color;
+                        opacity: 1;
+                        outline-color: $wht-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"],
+    button
+    {
+        background-color: #fff;
+        border: 1px solid $font-color;
+        color: $main-font-color;
+        padding: 0.8rem 2rem;
+        font-family: 'open sans', sans-serif;
+        font-weight: 300;
+        transition: all 0.2s ease;
+
+        &:hover, &:focus {
+            border-color: $wht-blue;
+            background-color: $wht-blue;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+}

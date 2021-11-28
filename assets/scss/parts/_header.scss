@@ -1,0 +1,205 @@
+#masthead {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  z-index: 1000;
+    
+  @include media-breakpoint-up(md) {
+    flex-direction: column;
+  }
+
+  #branding {
+    padding: 20px;
+    width: 80%;
+    @include media-breakpoint-up(md) {
+      width: 100%;
+    }
+
+    img {
+      border: 0;
+      float: none;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+
+  #access {
+    display: none;
+    width: 100%;
+    margin: 0;
+    
+    @include media-breakpoint-up(md) {
+      position: relative;
+      display: block;
+    }
+
+    float: none;
+    border-top: 1px solid $main-menu-border-color;
+    background-color: transparent;
+
+    > .menu-header {
+      width: auto;
+      margin: 0;
+
+      > #menu-main-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include media-breakpoint-up(md) {
+          flex-direction: row;
+          align-items: baseline;
+          align-items: flex-start;
+        }
+
+        > li {
+          float: none;
+
+          &.current-menu-item > a,
+          .current_page_item > a,
+          > a
+          {
+            color: $main-font-color;
+          }
+          > a {
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+          }
+
+          &:hover,
+          &:focus
+          {
+            a {
+              background-color: transparent;
+              border-bottom-color: $main-menu-current-item;
+            }
+          }
+
+          ul.sub-menu {
+            opacity: 0;
+            @include media-breakpoint-up(md) {
+              opacity: 1;
+            }
+            background-color: $submenu-background-color;
+            border: 1px solid $main-menu-border-color;
+            text-align: center;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            > li
+            {
+              a {
+                color: $main-font-color;
+                background-color: transparent;
+                width: auto;
+              }
+            }
+            > li:hover,
+            > li:focus
+            {
+              a {
+                background-color: rgba($wht-blue, .25);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #access-mobile {
+    display: block;
+    text-align: right;
+    padding: 0.25rem;
+    width: 20%;
+    
+    @include media-breakpoint-up(sm) {
+      padding: 1.25rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    > button {
+      border-color: $icon-hover-gray;
+      padding: 0;
+      width: 3rem;
+      height: 3rem;
+      display: inline-block;
+      font-size: 1rem;
+      line-height: 3rem;
+      text-align: center;
+      
+      @include media-breakpoint-up(sm) {
+        font-size: 1.75rem;
+      }
+
+      svg {
+        color: $icon-hover-gray;
+      }
+
+      &:hover, &:focus {
+        outline: 0;
+        svg {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+#access a.header-button,
+a.header-button {
+  transition: all 0.2s ease;
+  text-decoration: unset;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  background-color: $wht-blue;
+  border: 2px solid $wht-blue;
+  border-radius: 3px;
+
+  &:hover, 
+  &:focus {
+      border-color: $wht-blue;
+      background-color: #fff;
+      color: $wht-blue;
+  }
+
+  &--mobile {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      width: 30%;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      padding: 0 1rem;
+      right: 4rem;
+      top: 0.25rem;
+    }
+  }
+}

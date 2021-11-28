@@ -1,0 +1,38 @@
+.fa__block {
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    line-height: 2rem;
+    border: 1px solid;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    > svg {
+        vertical-align: baseline;
+    }
+
+    &--transparent {
+        background-color: unset;
+        border-color: $icon-gray;
+
+        &:hover {
+            background-color: $wht-blue;
+            border-color: $wht-blue;
+
+            svg {
+                color: #fff !important;
+            }
+        }
+    }
+
+    &--blue {
+        background-color: $wht-blue;
+        border-color: $wht-blue;
+
+        svg {
+            color: #fff !important;
+        }
+    }
+}

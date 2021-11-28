@@ -1,0 +1,108 @@
+.wrapper {
+    padding: 0;
+    width: 95%;
+    max-width: 1200px;
+    margin: 8px auto 0 auto;
+
+    &--styled {
+        background-color: #fff;
+        border: 1px solid $border-color;
+        box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.065);
+    }
+
+    &--preview {
+        border-bottom: 3px solid $main-menu-current-item;
+        line-height: 0;
+        display: none;
+        @include media-breakpoint-up(sm) {
+            display: block;
+        }
+
+        &:empty {
+            display: none;
+        }
+
+        > img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    &--map {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    > .row {
+        padding: 1.25rem;
+
+        > [class*="col-"] {
+            padding: 0.75rem;
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+@media screen and (min-width: 576px) {
+    html {
+        font-size: 85%;
+    }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body,
+h3#comments-title, h3#reply-title, #access .menu, #access div.menu ul, #cancel-comment-reply-link, .form-allowed-tags, #site-info, #site-title, #wp-calendar, .comment-meta, .comment-body tr th, .comment-body thead th, .entry-content label, .entry-content tr th, .entry-content thead th, .entry-meta, .entry-title, .entry-utility, #respond label, .navigation, .page-title, .pingback p, .reply, .widget-title, .wp-caption-text
+{
+    font-family: 'open sans', sans-serif;
+    font-weight: 300;
+    color: $main-font-color;
+}
+
+.align {
+    &--right {
+        text-align: right;
+    }
+}
+
+.svg-inline--fa {
+    color: $icon-gray;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $icon-hover-gray;
+    }
+}
+
+.style-svg {
+    img {
+        filter: map-get($filter, 'icon-hover-gray');
+
+        &:focus,
+        &:hover {
+            filter: map-get($filter, 'wht-blue');
+        }
+    }
+}
+
+.block-header {
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+    display: block;
+    border-bottom: 1px solid $light-gray;
+    position: relative;
+    color: $main-font-color;
+    text-decoration: none;
+    padding: 0 0 0.7rem;
+    margin: 0 0 1rem 5rem;
+}

@@ -1,0 +1,36 @@
+$path-fonts: 'fonts';
+$fa-font-path: 'fonts';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+$grid-columns:                12;
+$grid-gutter-width:           0;
+
+$breadcrumbs-background-color: #f5f5f5;
+$last-item-font-color: #5a5a5a;
+
+$border-color: #dbdbdb;
+
+$main-menu-border-color: #ebebeb;
+$main-font-color: #313131;
+$main-menu-current-item: #1e5f9b;
+
+$wht-blue: #1e5f9b;
+$light-gray: #e3e3e3;
+$icon-gray: #b8b8b8;
+$icon-hover-gray: #727272;
+
+$submenu-background-color: #fff;
+$font-color: #ccc;
+
+$margin: 20px;
+
+$filter: (
+  'wht-blue': invert(24%) sepia(98%) saturate(1010%) hue-rotate(184deg) brightness(95%) contrast(84%),
+  'icon-hover-gray': invert(49%) sepia(0%) saturate(0%) hue-rotate(156deg) brightness(90%) contrast(82%),
+);

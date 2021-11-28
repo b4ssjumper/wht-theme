@@ -1,0 +1,15 @@
+#content .ghostkit-button-wrapper {
+    .ghostkit-button {
+        background-color: #fff;
+        border: 1px solid $light-gray;
+        color: $main-font-color;
+        padding: 0.9rem 2rem;
+        transition: all 0.2s ease;
+
+        &:hover, &:focus {
+            border-color: $wht-blue;
+            background-color: $wht-blue;
+            color: #fff;
+        }
+    }
+}

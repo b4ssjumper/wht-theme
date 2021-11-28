@@ -1,0 +1,19 @@
+#breadcrumbs {
+    background-color: $breadcrumbs-background-color;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    margin: 0;
+    padding: 8px 20px;
+    color: $font-color;
+    
+    @include media-breakpoint-up(md) {
+        padding: 8px 40px;
+    }
+
+    a,
+    .breadcrumb_last
+    {
+        color: $last-item-font-color;
+        text-decoration: none;
+    }
+}
